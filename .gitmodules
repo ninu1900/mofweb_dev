@@ -1,0 +1,3 @@
+[submodule "mofweb_dev"]
+	path = mofweb_dev
+	url = https://github.com/ninu1900/mofweb_dev.git
