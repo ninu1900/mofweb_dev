@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './images/mof-logo.png'
 
@@ -6,24 +6,30 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
 
+import '../components/Navbar.css'
 
 import IconButton from './IconButton'
 // import { Facebook } from 'react-feather'
 // import { FiUser } from "react-icons/fi";
 
 import { useTranslation } from 'react-i18next';
-
-
-import '../components/Navbar.css'
+import i18next from 'i18next';
 
 const locales = {
   en: { title: 'English' },
   la: { title: 'Lao' },
 };
 
+
 const IndexNavbar = () => {
 
   const { t, i18n } = useTranslation();
+
+  //   useEffect(() => {
+  //     if (localStorage.getItem("i18nextlng")?.length > 2){
+  //       i18next.changeLanguage("en-US");
+  //     }
+  //   }, []);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -34,8 +40,6 @@ const IndexNavbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-    //for dropdown menu
 
 
     // setting mobile nav
@@ -70,22 +74,8 @@ const IndexNavbar = () => {
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-item'>
-                        <a href='/' onClick={closeMenu}>{t('main.menu1')}</a>
+                        <a href='/' onClick={closeMenu}>{t('main.home')}</a>
                     </li>
-
-                    {/* <li className='nav-item relative group'>
-                      <a href='#about'>Laws & Legislation</a>
-                      <div className='absolute hidden bg-black py-2 mt-2 space-y-2 group-hover:block w-auto p-2 rounded-lg z-10'>
-                        <a href='#submenu-item-1' className="text-white hover:text-blue-500">Law</a>
-                        <a href='#submenu-item-2' className="text-white hover:text-blue-500">Decree</a>
-                        <a href='#submenu-item-3' className="text-white hover:text-blue-500">Ordinance</a>
-                        <a href='#submenu-item-4' className="text-white hover:text-blue-500">Agreement</a>
-                        <a href='#submenu-item-5' className="text-white hover:text-blue-500">Instruction</a>
-                        <a href='#submenu-item-6' className="text-white hover:text-blue-500">Announcement and Instruction</a>
-                      </div>
-                    </li> */}
-
-
                     <li className='nav-item'>
                         <a href='#about' onClick={closeMenu}>{t('main.menu2')}</a>
                     </li>

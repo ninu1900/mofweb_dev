@@ -3,12 +3,13 @@ import { Blogs, IndexNavbar } from "../components"
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
-import TanStackTable from '../components/TanStackTable';
+// import TanStackTable from '../components/TanStackTable';
 
 import i18n from "../i18n";
 import LocaleContext from '../LocaleContext';
 
 function Loading() {
+
   return(
     <>Loading....</>
   )
@@ -31,7 +32,7 @@ const Homepage = ({blogs}) => {
           <IndexNavbar />
           <Hero />
           <Carousel />
-          <TanStackTable />
+          {/* <TanStackTable /> */}
           <Blogs blogs={blogs} /> 
           <Footer />  
          
