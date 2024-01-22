@@ -1,0 +1,22 @@
+/* MobileMenu.css */
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 30%;
+    height: 100%;
+    background: white;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: right 0.3s ease-in-out;
+  }
+  
+  .mobile-menu-container.active {
+    right: 0; /* Slide in */
+  }
+  
+  .menu {
+    width: 100%; /* Make the menu take up the full width of the container */
+    /* Add other styling for your menu here */
+  }
+  

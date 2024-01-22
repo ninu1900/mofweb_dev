@@ -1,0 +1,185 @@
+.header {
+  @apply fixed top-0 left-0 z-10 transition duration-300 ease-in;
+  height: 90px;
+  width: 100%;
+}
+
+.header-bg {
+  @apply bg-green-500; /* Use your desired background color */
+  background-color: rgba(31, 146, 3, 0.9);
+}
+
+.header .navbar {
+  @apply flex justify-between items-center max-w-screen-xl mx-auto h-full px-4;
+}
+
+#dropdown-menu a {
+  @apply text-black;
+}
+
+.header .nav-menu a {
+  @apply text-white;
+}
+
+.header .navbar img {
+  @apply w-12 h-auto; /* Adjust width as needed */
+}
+
+.header .nav-menu {
+  @apply flex text-white;
+}
+
+.header .nav-item {
+  @apply py-4 font-medium;
+}
+
+.header .nav-item a:hover {
+  @apply pb-3 border-b-2 border-secondary-color; /* Adjust secondary color */
+}
+
+.hamburger {
+  @apply hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      @apply flex flex-col w-full absolute top-20 left-0 bg-green-500 opacity-95 pt-8 transition-transform duration-300 ease-in-out;
+      transform: translateY(-100%);
+  }
+
+  .nav-menu.active {
+      display: flex;
+      @apply transform translate-y-0;
+  }
+
+  .nav-menu li {
+      @apply text-center mb-6;
+  }
+
+  .hamburger {
+      @apply block;
+  }
+
+  .logo {
+      @apply mr-auto;
+  }
+
+  .navbar {
+      @apply p-4;
+  }
+
+  /* Add this class to handle the background color change on scroll */
+  .header-bg {
+      @apply bg-green-500; /* Adjust the background color */
+  }
+}
+
+
+
+/* .header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: .3s ease-in;
+  
+  
+}
+
+.header-bg {
+  background-color: rgba(31, 146, 3, 0.9);
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: auto;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+#dropdown-menu a {
+  color: black;
+}
+
+.header .nav-menu a {
+  color: #ffffff;
+} 
+
+.header .navbar img {
+  width: 50px;
+  height: auto;
+}
+
+.header .nav-menu {
+  display: flex;
+  color: #ffffff;
+}
+
+.header .nav-item {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.header .nav-item a:hover {
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--secondary-color); 
+}
+
+.hamburger {
+  display: none;
+} */
+
+/* @media screen and (max-width: 768px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100px; 
+    left: 0;
+    background-color:rgba(31, 146, 3, 0.9); 
+    z-index: 1;
+    opacity: 0.95;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0); 
+  }
+
+  .nav-menu li {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+ 
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  
+  .nav-menu li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  
+  .header-bg {
+    background-color: rgba(31, 146, 3, 0.9); 
+  }
+}  */

@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+.list {
+    overflow-x: auto;
+}
+
+.button {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  
+  
